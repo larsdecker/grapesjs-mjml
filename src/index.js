@@ -1,28 +1,27 @@
 export default (editor, opts = {}) => {
-  let c = opts || {};
-  let config = editor.getConfig();
-
+    let c = opts || {};
+    let config = editor.getConfig();
 
   let defaults = {
     editor,
     cmdBtnMoveLabel: 'Move',
-    cmdBtnUndoLabel: 'Undo',
-    cmdBtnRedoLabel: 'Redo',
-    cmdBtnDesktopLabel: 'Desktop',
-    cmdBtnTabletLabel: 'Tablet',
-    cmdBtnMobileLabel: 'Mobile',
+        cmdBtnUndoLabel: 'Undo',
+        cmdBtnRedoLabel: 'Redo',
+        cmdBtnDesktopLabel: 'Desktop',
+        cmdBtnTabletLabel: 'Tablet',
+        cmdBtnMobileLabel: 'Mobile',
 
     expTplBtnTitle: c.expTplBtnTitle || 'View Code',
     fullScrBtnTitle: c.fullScrBtnTitle || 'FullScreen',
     swichtVwBtnTitle: c.swichtVwBtnTitle || 'View Components',
     defaultTemplate: '', // Default template in case the canvas is empty
-    categoryLabel: '',
+        categoryLabel: '',
 
-    // Code viewer theme
-    codeViewerTheme: 'hopscotch',
+        // Code viewer theme
+        codeViewerTheme: 'hopscotch',
 
     // Import placeholder MJML
-    importPlaceholder: '',
+        importPlaceholder: '',
 
     // Title for the import modal
     modalTitleImport: 'Import MJML',
@@ -42,25 +41,25 @@ export default (editor, opts = {}) => {
     // Overwrite default export command
     overwriteExport: 1,
 
-    // String before the MJML in export code
-    preMjml: '',
+        // String before the MJML in export code
+        preMjml: '',
 
-    // String after the MJML in export code
-    postMjml: '',
+        // String after the MJML in export code
+        postMjml: '',
 
-    // Export 'mjml', 'html' or both (leave empty) TODO
-    exportOnly: '',
+        // Export 'mjml', 'html' or both (leave empty) TODO
+        exportOnly: '',
 
-    // Clean all previous blocks if true
-    resetBlocks: 1,
+        // Clean all previous blocks if true
+        resetBlocks: 1,
 
-    // Reset the Style Manager and add new properties for MJML
-    resetStyleManager: 1,
+        // Reset the Style Manager and add new properties for MJML
+        resetStyleManager: 1,
 
-    // Column padding (this way it's easier select columns)
-    columnsPadding: '10px 0',
+        // Column padding (this way it's easier select columns)
+        columnsPadding: '10px 0',
 
-    ...opts,
+        ...opts,
   };
 
   // Change some config
