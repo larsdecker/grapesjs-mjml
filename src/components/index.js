@@ -11,6 +11,8 @@ import loadSocial from './Social';
 import loadSocialElement from './SocialElement';
 import loadDivider from './Divider';
 import loadSpacer from './Spacer';
+import loadHero from './Hero';
+import loadPreview from './PreviewLine';
 
 export default (editor, opt = {}) => {
     let domc = editor.DomComponents;
@@ -266,4 +268,6 @@ export default (editor, opt = {}) => {
     loadSocialElement(editor, compOpts);
     loadDivider(editor, compOpts);
     loadSpacer(editor, compOpts);
+    loadHero(editor, compOpts);
+    loadPreview(editor, compOpts);
 }
