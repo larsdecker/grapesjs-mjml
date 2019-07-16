@@ -273,10 +273,11 @@ export default (editor, opt = {}) => {
   loadSocialElement(editor, compOpts);
   loadDivider(editor, compOpts);
   loadSpacer(editor, compOpts);
-    loadHero(editor, compOpts);
-    loadNavBar(editor, compOpts);
-    loadNavBarLink(editor, compOpts);
-    loadCarousel(editor, compOpts);
-    loadCarouselImage(editor, compOpts);
-    loadPreview(editor, compOpts);
+  loadPreview(editor, compOpts);
+  loadHero(editor, compOpts);
+  loadNavBar(editor, compOpts);
+  loadNavBarLink(editor, compOpts);
+  loadCarousel(editor, compOpts);
+  loadCarouselImage(editor, compOpts);
+  loadPreview(editor, compOpts);
 }
