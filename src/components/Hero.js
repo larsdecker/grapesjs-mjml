@@ -25,11 +25,13 @@ export default (editor, {
 
         view: defaultView.extend({
             ...coreMjmlView,
-
             tagName: 'tr',
-
             attributes: {
                 style: 'pointer-events: all; display: table; width: 100%',
+            },
+
+            renderStyle() {
+                this.el.style = this.el.getAttribute('style') + this.attributes.style;
             },
 
             getMjmlTemplate() {
@@ -38,11 +40,9 @@ export default (editor, {
                     end: `</mj-column></mj-body></mjml>`,
                 };
             },
-
             getTemplateFromEl(sandboxEl) {
                 return sandboxEl.querySelector('tr').innerHTML;
             },
-
             getChildrenSelector() {
                 return 'td';
             },
