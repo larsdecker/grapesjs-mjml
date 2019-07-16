@@ -3,6 +3,12 @@ export default (editor, {
 }) => {
     const type = 'mj-hero';
 
+    const droppable = [
+        'mj-text',
+        'mj-button',
+        'mj-image',
+    ].map(tag => `[data-gjs-type=${tag}]`).join(', ');
+
     dc.addType(type, {
         model: defaultModel.extend({
             ...coreMjmlModel,
@@ -11,7 +17,7 @@ export default (editor, {
                 ...defaultModel.prototype.defaults,
                 'custom-name': 'Hero',
                 draggable: '[data-gjs-type=mj-column]',
-                droppable: '[data-gjs-type=mj-text]',
+                droppable,
             },
         }, {
 
