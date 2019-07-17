@@ -12,7 +12,7 @@ export default (editor, {
             defaults: {
                 ...defaultModel.prototype.defaults,
                 'custom-name': 'Social',
-                draggable: '[data-gjs-type=mj-column]',
+                draggable: '[data-gjs-type=mj-column], [data-gjs-type=mj-hero]',
                 droppable: '[data-gjs-type=mj-social-element]',
                 stylable: [
                     'text-decoration', 'align', 'font-family', 'font-size', 'line-height',
@@ -33,20 +33,20 @@ export default (editor, {
                         label: 'Mode',
                         name: 'mode',
                         options: [
-                            {value: 'horizontal', name: 'Horizontal'},
-                            {value: 'vertical', name: 'Vertical'},
+                            { value: 'horizontal', name: 'Horizontal' },
+                            { value: 'vertical', name: 'Vertical' },
                         ]
                     }
                 ],
             },
         }, {
 
-            isComponent(el) {
-                if (el.tagName === type.toUpperCase()) {
-                    return {type};
-                }
-            },
-        }),
+                isComponent(el) {
+                    if (el.tagName === type.toUpperCase()) {
+                        return { type };
+                    }
+                },
+            }),
 
 
         view: defaultView.extend({

@@ -63,7 +63,7 @@ export default (editor, opt = {}) => {
   bm.add('mj-divider', {
     label: 'Divider',
     content: '<mj-divider/>',
-    attributes: { class: 'gjs-fonts gjs-f-divider'},
+    attributes: { class: 'gjs-fonts gjs-f-divider' },
     ...allBlocks,
   });
 
@@ -88,7 +88,14 @@ export default (editor, opt = {}) => {
   bm.add('mj-spacer', {
     label: 'Spacer',
     content: '<mj-spacer/>',
-    attributes: { class: 'fa fa-arrows-v'},
+    attributes: { class: 'fa fa-arrows-v' },
+    ...allBlocks,
+  });
+
+  bm.add('mj-hero', {
+    label: 'Hero',
+    content: '<mj-hero background-url="http://placehold.it/350x250/78c5d6/fff"><mj-text>Sample Text</mj-text></mj-hero>',
+    attributes: { class: 'fa fa-image' },
     ...allBlocks,
   });
 

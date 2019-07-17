@@ -14,7 +14,7 @@ export default (editor, {
             defaults: {
                 ...defaultModel.prototype.defaults,
                 'custom-name': 'Divider',
-                draggable: '[data-gjs-type=mj-column]',
+                draggable: '[data-gjs-type=mj-column], [data-gjs-type=mj-hero]',
                 droppable: false,
                 'style-default': {
                     'width': '100%',
@@ -34,12 +34,12 @@ export default (editor, {
             },
         }, {
 
-            isComponent(el) {
-                if (el.tagName === type.toUpperCase()) {
-                    return {type};
-                }
-            },
-        }),
+                isComponent(el) {
+                    if (el.tagName === type.toUpperCase()) {
+                        return { type };
+                    }
+                },
+            }),
 
 
         view: defaultView.extend({

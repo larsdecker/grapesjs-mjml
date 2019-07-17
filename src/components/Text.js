@@ -14,7 +14,7 @@ export default (editor, {
             defaults: {
                 ...textModel.prototype.defaults,
                 'custom-name': 'Text',
-                draggable: '[data-gjs-type=mj-column]',
+                draggable: '[data-gjs-type=mj-column], [data-gjs-type=mj-hero]',
                 highlightable: false,
                 stylable: [
                     'height', 'font-style', 'font-size', 'font-weight', 'font-family', 'color',
@@ -34,16 +34,16 @@ export default (editor, {
             },
         }, {
 
-            isComponent(el) {
-                if (el.tagName === type.toUpperCase()) {
-                    return {
-                        type,
-                        content: el.innerHTML,
-                        components: [],
-                    };
-                }
-            },
-        }),
+                isComponent(el) {
+                    if (el.tagName === type.toUpperCase()) {
+                        return {
+                            type,
+                            content: el.innerHTML,
+                            components: [],
+                        };
+                    }
+                },
+            }),
 
 
         view: textView.extend({

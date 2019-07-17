@@ -1,10 +1,11 @@
 // Specs https://mjml.io/documentation/#mj-body
 
-export default (editor, {dc, defaultModel, defaultView, coreMjmlModel, coreMjmlView}) => {
+export default (editor, { dc, defaultModel, defaultView, coreMjmlModel, coreMjmlView }) => {
     const type = 'mj-body';
 
     const droppable = [
         'mj-section',
+        'mj-hero',
     ].map(tag => `[data-gjs-type=${tag}]`).join(', ');
 
     dc.addType(type, {
@@ -18,7 +19,7 @@ export default (editor, {dc, defaultModel, defaultView, coreMjmlModel, coreMjmlV
                 draggable: false,
                 copyable: false,
                 removable: false,
-                'style-default': {width: '600px'},
+                'style-default': { width: '600px' },
                 stylable: [
                     // Currently the UX sucks too much with the heavy rendering approach
                     'width',
@@ -26,12 +27,12 @@ export default (editor, {dc, defaultModel, defaultView, coreMjmlModel, coreMjmlV
                 ],
             },
         }, {
-            isComponent(el) {
-                if (el.tagName === type.toUpperCase()) {
-                    return {type};
-                }
-            },
-        }),
+                isComponent(el) {
+                    if (el.tagName === type.toUpperCase()) {
+                        return { type };
+                    }
+                },
+            }),
         view: defaultView.extend({
             ...coreMjmlView,
 

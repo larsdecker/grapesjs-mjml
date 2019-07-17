@@ -16,7 +16,7 @@ export default (editor, {
                 'custom-name': 'Image',
                 resizable: false,
                 highlightable: false,
-                draggable: '[data-gjs-type=mj-column],[data-gjs-type=mj-section]',
+                draggable: '[data-gjs-type=mj-column],[data-gjs-type=mj-section], [data-gjs-type=mj-hero]',
                 stylable: [
                     'width', 'height',
                     'padding', 'padding-top', 'padding-left', 'padding-right', 'padding-bottom',
@@ -36,12 +36,12 @@ export default (editor, {
             },
         }, {
 
-            isComponent(el) {
-                if (el.tagName === type.toUpperCase()) {
-                    return {type};
-                }
-            },
-        }),
+                isComponent(el) {
+                    if (el.tagName === type.toUpperCase()) {
+                        return { type };
+                    }
+                },
+            }),
 
 
         view: imageView.extend({

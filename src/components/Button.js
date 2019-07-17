@@ -14,7 +14,7 @@ export default (editor, {
             defaults: {
                 ...linkModel.prototype.defaults,
                 'custom-name': 'Button',
-                draggable: '[data-gjs-type=mj-column]',
+                draggable: '[data-gjs-type=mj-column], [data-gjs-type=mj-hero]',
                 highlightable: false,
                 stylable: ['width', 'height',
                     'background-color', 'container-background-color',
@@ -41,12 +41,12 @@ export default (editor, {
             },
         }, {
 
-            isComponent(el) {
-                if (el.tagName === type.toUpperCase()) {
-                    return {type};
-                }
-            },
-        }),
+                isComponent(el) {
+                    if (el.tagName === type.toUpperCase()) {
+                        return { type };
+                    }
+                },
+            }),
 
 
         view: linkView.extend({
