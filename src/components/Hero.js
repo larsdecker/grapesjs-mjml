@@ -49,10 +49,14 @@ export default (editor, {
                 'mode': 'fixed-height',
             },
 
+            renderStyle() {
+                this.el.style = this.el.getAttribute('style') + this.attributes.style;
+            },
+
             getMjmlTemplate() {
                 return {
-                    start: `<mjml><mj-body><mj-column>`,
-                    end: `</mj-column></mj-body></mjml>`,
+                    start: `<mjml><mj-body>`,
+                    end: `</mj-body></mjml>`,
                 };
             },
 

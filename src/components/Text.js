@@ -34,16 +34,16 @@ export default (editor, {
       },
     }, {
 
-        isComponent(el) {
-          if (el.tagName === type.toUpperCase()) {
-            return {
-              type,
-              content: el.innerHTML,
-              components: [],
-            };
-          }
-        },
-      }),
+                isComponent(el) {
+                    if (el.tagName === type.toUpperCase()) {
+                        return {
+                            type,
+                            content: el.innerHTML,
+                            components: [],
+                        };
+                    }
+                },
+            }),
 
 
     view: textView.extend({

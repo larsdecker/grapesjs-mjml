@@ -41,12 +41,12 @@ export default (editor, {
       },
     }, {
 
-        isComponent(el) {
-          if (el.tagName === type.toUpperCase()) {
-            return { type };
-          }
-        },
-      }),
+                isComponent(el) {
+                    if (el.tagName === type.toUpperCase()) {
+                        return { type };
+                    }
+                },
+            }),
 
 
     view: linkView.extend({

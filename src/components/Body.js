@@ -3,9 +3,9 @@
 export default (editor, { dc, defaultModel, defaultView, coreMjmlModel, coreMjmlView }) => {
   const type = 'mj-body';
 
-  const droppable = [
-    'mj-section',
-  'mj-hero',
+    const droppable = [
+        'mj-section',
+        'mj-hero',
     ].map(tag => `[data-gjs-type=${tag}]`).join(', ');
 
   dc.addType(type, {
@@ -13,28 +13,28 @@ export default (editor, { dc, defaultModel, defaultView, coreMjmlModel, coreMjml
     model: defaultModel.extend({
       ...coreMjmlModel,
 
-      defaults: {
-        ...defaultModel.prototype.defaults,
-        droppable,
-        draggable: false,
-        copyable: false,
-        removable: false,
-        'style-default': { width: '600px' },
-        stylable: [
-          // Currently the UX sucks too much with the heavy rendering approach
-          'width',
-          'background-color'
-        ],
-      },
-    }, {
-        isComponent(el) {
-          if (el.tagName === type.toUpperCase()) {
-            return { type };
-          }
-        },
-      }),
-    view: defaultView.extend({
-      ...coreMjmlView,
+            defaults: {
+                ...defaultModel.prototype.defaults,
+                droppable,
+                draggable: false,
+                copyable: false,
+                removable: false,
+                'style-default': { width: '600px' },
+                stylable: [
+                    // Currently the UX sucks too much with the heavy rendering approach
+                    'width',
+                    'background-color'
+                ],
+            },
+        }, {
+                isComponent(el) {
+                    if (el.tagName === type.toUpperCase()) {
+                        return { type };
+                    }
+                },
+            }),
+        view: defaultView.extend({
+            ...coreMjmlView,
 
       tagName: 'div',
 
