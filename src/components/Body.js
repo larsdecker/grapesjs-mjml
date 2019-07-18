@@ -22,7 +22,7 @@ export default (editor, { dc, defaultModel, defaultView, coreMjmlModel, coreMjml
                 'style-default': { width: '600px' },
                 stylable: [
                     // Currently the UX sucks too much with the heavy rendering approach
-                    'width',
+                    // 'width',     // TODO: Please fix me
                     'background-color'
                 ],
             },
@@ -61,6 +61,16 @@ export default (editor, { dc, defaultModel, defaultView, coreMjmlModel, coreMjml
 
             renderContent() {
                 this.getChildrenContainer().innerHTML = this.model.get('content');
+            },
+
+            rerender() {
+                coreMjmlView.rerender.call(this);
+                this.model.components().models.forEach((item) => {
+                    if (item.attributes.type != "mj-section") {
+                        return;
+                    }
+                    item.view.rerender();
+                });
             },
 
         }),
