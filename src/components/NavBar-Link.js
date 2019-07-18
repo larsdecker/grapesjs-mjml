@@ -13,7 +13,7 @@ export default (editor, {
 
             defaults: {
                 ...defaultModel.prototype.defaults,
-                'custom-name': 'NavBar',
+                'custom-name': 'NavBar-Link',
                 draggable: '[data-gjs-type=mj-body]',
                 droppable,
                 'style-default': {
