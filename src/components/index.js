@@ -12,6 +12,8 @@ import loadSocialElement from './SocialElement';
 import loadDivider from './Divider';
 import loadSpacer from './Spacer';
 import loadHero from './Hero';
+import loadNavBar from './NavBar';
+import loadNavBarLink from './NavBar-Link';
 import loadPreview from './PreviewLine';
 
 export default (editor, opt = {}) => {
@@ -269,5 +271,7 @@ export default (editor, opt = {}) => {
     loadDivider(editor, compOpts);
     loadSpacer(editor, compOpts);
     loadHero(editor, compOpts);
+    loadNavBar(editor, compOpts);
+    loadNavBarLink(editor, compOpts);
     loadPreview(editor, compOpts);
 }
