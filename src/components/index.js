@@ -279,5 +279,7 @@ export default (editor, opt = {}) => {
   loadNavBarLink(editor, compOpts);
   loadCarousel(editor, compOpts);
   loadCarouselImage(editor, compOpts);
-  loadPreview(editor, compOpts);
+  loadNavBar(editor, compOpts);
+    loadNavBarLink(editor, compOpts);
+    loadPreview(editor, compOpts);
 }
