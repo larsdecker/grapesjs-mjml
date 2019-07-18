@@ -16,6 +16,9 @@ Supported components:
 `mj-social`
 `mj-divider`
 `mj-spacer`
+`mj-hero`
+`mj-carousel`
+`mj-navbar`
 
 
 ## Options
