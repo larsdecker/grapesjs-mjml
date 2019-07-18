@@ -1,7 +1,7 @@
 export default (editor, {
     dc, opt, defaultModel, defaultView, coreMjmlModel, coreMjmlView
 }) => {
-    const type = 'mj-navbar-link';
+    const type = 'mj-carousel-image';
 
     dc.addType(type, {
         model: defaultModel.extend({
@@ -9,7 +9,7 @@ export default (editor, {
 
             defaults: {
                 ...defaultModel.prototype.defaults,
-                'custom-name': 'NavBar',
+                'custom-name': 'Carousel',
                 draggable: '[data-gjs-type=mj-body]',
                 droppable: false,
                 'style-default': {

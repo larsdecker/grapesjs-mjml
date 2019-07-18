@@ -14,6 +14,9 @@ import loadSpacer from './Spacer';
 import loadHero from './Hero';
 import loadNavBar from './NavBar';
 import loadNavBarLink from './NavBar-Link';
+import loadCarousel from './Carousel';
+import loadCarouselImage from './Carousel-Image';
+
 import loadPreview from './PreviewLine';
 
 export default (editor, opt = {}) => {
@@ -273,6 +276,8 @@ export default (editor, opt = {}) => {
     loadHero(editor, compOpts);
     loadNavBar(editor, compOpts);
     loadNavBarLink(editor, compOpts);
+    loadCarousel(editor, compOpts);
+    loadCarouselImage(editor, compOpts);
     loadPreview(editor, compOpts);
 
 }

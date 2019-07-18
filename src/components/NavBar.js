@@ -1,7 +1,7 @@
 export default (editor, {
     dc, opt, defaultModel, defaultView, coreMjmlModel, coreMjmlView
 }) => {
-    const type = 'mj-navbar-link';
+    const type = 'mj-navbar';
 
     dc.addType(type, {
         model: defaultModel.extend({
@@ -9,9 +9,9 @@ export default (editor, {
 
             defaults: {
                 ...defaultModel.prototype.defaults,
-                'custom-name': 'NavBar',
+                'custom-name': 'NavBar-Link',
                 draggable: '[data-gjs-type=mj-body]',
-                droppable: false,
+                droppable: '[data-gjs-type=mj-navbar-link]',
                 'style-default': {
                     // TODO
                 },
