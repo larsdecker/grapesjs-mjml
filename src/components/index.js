@@ -274,4 +274,5 @@ export default (editor, opt = {}) => {
     loadNavBar(editor, compOpts);
     loadNavBarLink(editor, compOpts);
     loadPreview(editor, compOpts);
+
 }
