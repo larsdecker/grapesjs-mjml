@@ -63,7 +63,7 @@ export default (editor, opt = {}) => {
     bm.add('mj-divider', {
         label: 'Divider',
         content: '<mj-divider/>',
-        attributes: {class: 'gjs-fonts gjs-f-divider' },
+        attributes: {class: 'gjs-fonts gjs-f-divider'},
         ...allBlocks,
     });
 
@@ -104,33 +104,60 @@ export default (editor, opt = {}) => {
     //     </mj-carousel>`,
     //     attributes: {class: 'fa fa-image'},
     //     ...allBlocks,
+    // });bm.add('mj-social-group', {
+      label: 'Group Social',
+      content: `<mj-social font-size="12px" icon-size="24px" border-radius="12px" mode="horizontal">
+        <mj-social-element name="facebook"></mj-social-element>
+        <mj-social-element name="google"></mj-social-element>
+        <mj-social-element name="twitter"></mj-social-element>
+      </mj-social>`,
+      attributes: { class: 'fa fa-share-alt'},
+       ...allBlocks,
+    });
+
+    bm.add('mj-spacer', {
+       label: 'Social Element',
+       content: '<mj-social-element name="facebook" />',
+       attributes: { class: 'fa fa-share-alt' },
+       ...allBlocks,
+    });
+
+
+
+    bm.add('mj-hero', {
+        label: 'Hero',
+        content: '<mj-hero background-url="http://placehold.it/350x250/78c5d6/fff"><mj-text>Sample Text</mj-text></mj-hero>',
+        attributes: {class: 'fa fa-image'},
+        ...allBlocks,
+    });
+
+    bm.add('mj-navbar', {
+        label: 'NavBar',
+        content: '<mj-navbar><mj-navbar-link></mj-navbar-link></mj-navbar>',
+        attributes: {class: 'fa fa-image'},
+        ...allBlocks,
+    });
+
+    // bm.add('mj-carousel', {
+    //     label: 'Carousel',
+    //     content: `<mj-carousel>
+    //         <mj-carousel-image src="https://www.mailjet.com/wp-content/uploads/2016/11/ecommerce-guide.jpg" />
+    //         <mj-carousel-image src="https://www.mailjet.com/wp-content/uploads/2016/09/3@1x.png" />
+    //         <mj-carousel-image src="https://www.mailjet.com/wp-content/uploads/2016/09/1@1x.png" />
+    //     </mj-carousel>`,
+    //     attributes: {class: 'fa fa-image'},
+    //     ...allBlocks,
     // });
 
     bm.add('mj-social-group', {
         label: 'Group Social',
         content: `<mj-social font-size="12px" icon-size="24px" border-radius="12px" mode="horizontal">
-        <mj-social-element name="facebook"></mj-social-element>
-        <mj-social-element name="google"></mj-social-element>
-        <mj-social-element name="twitter"></mj-social-element>
+        <mj-social-element src="https://cdn-images.mailchimp.com/icons/social-block-v2/dark-facebook-48.png" href="https://www.facebook.com/tutor.platform.global/?ref=br_rs"></mj-social-element>
+        <mj-social-element src="https://cdn-images.mailchimp.com/icons/social-block-v2/dark-link-48.png" href="https://www.tutorbot.io/"></mj-social-element>
+        <mj-social-element src="https://cdn-images.mailchimp.com/icons/social-block-v2/dark-linkedin-48.png" href="https://www.linkedin.com/company/tutor-platform/"></mj-social-element>
       </mj-social>`,
-        attributes: { class: 'fa fa-share-alt' },
-    ...allBlocks,
-  });
-
-  bm.add('mj-spacer', {
-    label: 'Social Element',
-    content: '<mj-social-element name="facebook" />',
-    attributes: { class: 'fa fa-share-alt' },
-    ...allBlocks,
-  });
-
-
-
-  bm.add('mj-hero', {
-    label: 'Hero',
-    content: '<mj-hero background-url="http://placehold.it/350x250/78c5d6/fff"><mj-text>Sample Text</mj-text></mj-hero>',
-    attributes: { class: 'fa fa-image' },
-    ...allBlocks,
-  });
+        attributes: {class: 'fa fa-share-alt'},
+        ...allBlocks,
+    });
 
 }
