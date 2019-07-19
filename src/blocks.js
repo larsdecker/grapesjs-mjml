@@ -113,8 +113,17 @@ export default (editor, opt = {}) => {
         <mj-social-element name="google"></mj-social-element>
         <mj-social-element name="twitter"></mj-social-element>
       </mj-social>`,
-        attributes: {class: 'fa fa-share-alt'},
-        ...allBlocks,
-    });
+        attributes: { class: 'fa fa-share-alt' },
+    ...allBlocks,
+  });
+
+  bm.add('mj-spacer', {
+    label: 'Social Element',
+    content: '<mj-social-element name="facebook" />',
+    attributes: { class: 'fa fa-share-alt' },
+    ...allBlocks,
+  });
+
+
 
 }
