@@ -31,28 +31,27 @@ export default (editor, {
 
         view: defaultView.extend({
             ...coreMjmlView,
-            tagName: 'tr',
-            attributes: {
-                style: 'pointer-events: all; display: table; width: 100%',
-                'mode': 'fixed-height',
-            },
 
-            renderStyle() {
-                this.el.style = this.el.getAttribute('style') + this.attributes.style;
+            tagName: 'table',
+
+            attributes: {
+                style: 'pointer-events: all; float: none; display: inline-table;',
             },
 
             getMjmlTemplate() {
                 return {
-                    start: `<mjml><mj-body>`,
-                    end: `</mj-body></mjml>`,
+                    start: `<mjml><mj-body><mj-column><mj-social>`,
+                    end: `</mj-social></mj-column></mj-body></mjml`,
                 };
             },
+
             getTemplateFromEl(sandboxEl) {
-                return sandboxEl.querySelector('tr').innerHTML;
+                return sandboxEl.querySelector('tr > td > table').innerHTML;
             },
+
             getChildrenSelector() {
-                return 'td';
-            },
+                return 'p';
+            }
         }),
     });
 }
