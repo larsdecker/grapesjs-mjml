@@ -8,7 +8,6 @@ let plugins = [];
 module.exports = (env = {}) => {
   if (env.production) {
     plugins = [
-      new webpack.optimize.UglifyJsPlugin({ minimize: true, compressor: { warnings: false }}),
       new webpack.BannerPlugin(`${name} - ${pkg.version}`),
     ]
   } else {
@@ -20,6 +19,7 @@ module.exports = (env = {}) => {
   }
 
   return {
+    mode: (env.production?'production':'development'),
     entry: './src',
     output: {
         filename: `./dist/${name}.min.js`,
@@ -27,7 +27,7 @@ module.exports = (env = {}) => {
         libraryTarget: 'umd',
     },
     module: {
-      loaders: [{
+      rules: [{
           test: /\.js$/,
           loader: 'babel-loader',
           include: /src/,
