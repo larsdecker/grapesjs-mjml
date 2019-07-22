@@ -104,7 +104,9 @@ export default (editor, opt = {}) => {
     //     </mj-carousel>`,
     //     attributes: {class: 'fa fa-image'},
     //     ...allBlocks,
-    // });bm.add('mj-social-group', {
+    // });
+
+    bm.add('mj-social-group', {
       label: 'Group Social',
       content: `<mj-social font-size="12px" icon-size="24px" border-radius="12px" mode="horizontal">
         <mj-social-element name="facebook"></mj-social-element>
