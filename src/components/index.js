@@ -166,7 +166,11 @@ export default (editor, opt = {}) => {
 
 
     getTemplateFromEl(sandboxEl) {
-      return sandboxEl.firstChild.innerHTML;
+      try {
+        return sandboxEl.firstChild.innerHTML;
+      } catch (e) {
+        console.error("components/index error on get innerHTML", e);
+      }
     },
 
 
